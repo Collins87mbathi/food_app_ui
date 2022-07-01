@@ -1,0 +1,153 @@
+
+@import '../variables/variables';
+@import '../variables/functionss';
+
+// *{
+//     background:url("https://media.istockphoto.com/photos/closeup-of-hamburger-with-black-background-picture-id1316673633?b=1&k=20&m=1316673633&s=170667a&w=0&h=4SUWvRqmq9eblMeMAksP_jL_J-fMUvnQUBHzfRClOZk=");
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-attachment: fixed;
+// }  
+.signup{
+    font-family: $font-stack;
+    font-size: 1.5rem;
+    height: 100%;
+    width: 100%;
+    @include flexCenter;
+
+    h3 {
+        font-size: 1.3rem;
+        margin:10px;
+        color: black;
+        font-family: 'Dancing Script', cursive;
+    }
+   
+}
+
+.container {
+@include flexCenter();
+filter:drop-shadow(10px 10px 20px black);
+background-color: $background-color;
+height: 400px;
+width: 350px;
+ margin: 50px;
+align-items: center;
+justify-content: center;
+
+.title{
+
+
+    h4{
+        
+        text-align: center;
+        margin: 20px;
+    }
+
+}
+
+ }
+
+ .inputs {
+     //margin: 10px;
+     display: flex;
+     flex-direction: column;
+     row-gap: 10px;
+
+     .input-type{
+        &:focus {
+            border: 2px solid #5fa4b1;
+        }
+     }
+     input {
+         padding: 10px;
+         border: 2px solid gray;
+         outline:none;
+         border-radius: 20px;
+         min-width: 35ch;
+     }
+     
+ }
+.button {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    
+    
+    button {
+     flex: 1;
+     padding: 10px 10px; 
+     border-radius: 20px;
+     color: white;
+     background-color: darkred;
+     border: 5px solid darkred;
+    }
+}
+
+span {
+    font-size: 1.2rem;
+}
+
+// .user input {
+//     background-image: url('https://cdn-icons-png.flaticon.com/512/1077/1077114.png');
+//     display: inline-block;
+//     width: 123px;
+//     height: 21px;
+//     background-repeat: no-repeat;
+//     background-position: 96px 0;
+//     vertical-align: middle;
+// }
+
+
+@media screen and (max-width: 768px) {
+  .signup{
+    background: url('https://media.istockphoto.com/photos/slice-of-pizza-isolated-on-white-background-picture-id1295596568?b=1&k=20&m=1295596568&s=170667a&w=0&h=iYtQ3yZhbJ7Qo_qFpZDN3KIJ5zkhiJGqo2OjL6aHyzE=');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+      h3{
+          font-size: 1.0rem;
+          text-align: center;
+         
+      }
+  }
+   span {
+    font-size: 1.0rem;
+}
+
+.container {
+    height: 350px;
+    width: 350px; 
+    align-self: center;
+    justify-content: center;
+}
+
+.inputs {
+input {
+    padding: 10px;
+    border: 2px solid gray;
+    outline:none;
+    border-radius: 20px;
+    
+ min-width: 25ch;
+}
+}
+
+ }
+
+ .error_msg,
+.success_msg {
+	width: 400px;
+	padding: 15px;
+	margin: 5px 0;
+	font-size: 12px;
+	background-color: #f34646;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+    text-align: center;
+}
+
+.success_msg {
+	background-color: #5cdd5c;
+}
