@@ -13,7 +13,8 @@ const Emailvertify = () => {
     useEffect(() => {
           const activationEmail = async () => {
               try {
-                  const res = await axios.get(BASE_URL +`/user/${param.id}/verify/${param.token}`)
+                  const res = await axios.get(BASE_URL +`/user/${param.id}/verify/${param.token}`);
+                  console.log(res.data);
                    setMsg(res.message);
               } catch (err) {
                console.log(err);
