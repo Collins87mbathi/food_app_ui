@@ -38,7 +38,7 @@ const SubmitForm = async(e) => {
   setMsg(res.data.msg);
  } catch (error) {
   dispatch(setLoginFailure());
-  setErrors(error.response.message);
+  setErrors(error.msg);
  }
 
 

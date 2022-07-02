@@ -37,7 +37,7 @@ const submitForm = async (e) => {
     setLoading(false);
   } catch (error) {
     dispatch(setLoginFailure());
-    setErrors(error.message);
+    setErrors(error.msg);
   }
 
 }
