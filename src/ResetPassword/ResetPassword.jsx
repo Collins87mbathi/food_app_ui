@@ -29,7 +29,7 @@ const ResetPassword = () => {
 			const { data } = await axios.post(BASE_URL + `/user/${param.id}/${param.token}`, { password });
 			setMsg(data.message);
 			setError("");
-			window.location = "/login";
+			window.location('/login');
 		} catch (error) {
 			if (
 				error.response &&

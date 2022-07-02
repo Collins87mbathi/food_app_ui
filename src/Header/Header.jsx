@@ -15,7 +15,7 @@ const Header = () => {
           <a href="/" className="btn hero-btn">Order Now</a>
         </article>
         <article className="hero-img">
-          <img src="https://freepngimg.com/thumb/burger/5-2-burger-png-thumb.png" class="hero-photo" alt="food" />
+          <img src="https://freepngimg.com/thumb/burger/5-2-burger-png-thumb.png" className="hero-photo" alt="food" />
         </article>
       </div>
     </div>
