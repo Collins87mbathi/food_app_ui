@@ -74,7 +74,7 @@ const SubmitForm = async(e) => {
  </form>
 
   </div>
-  <span>Do you have an account ? <Link to='/login'>sign in</Link></span>
+  <span className='asking'>Do you have an account ? <Link to='/login'>sign in</Link></span>
     </div>
  
   )

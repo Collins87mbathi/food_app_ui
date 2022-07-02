@@ -29,8 +29,8 @@
 @include flexCenter();
 filter:drop-shadow(10px 10px 20px black);
 background-color: $background-color;
-height: 400px;
-width: 350px;
+height: 450px;
+width: 400px; 
  margin: 50px;
 align-items: center;
 justify-content: center;
@@ -101,12 +101,12 @@ span {
 
 @media screen and (max-width: 768px) {
   .signup{
-    background: url('https://media.istockphoto.com/photos/slice-of-pizza-isolated-on-white-background-picture-id1295596568?b=1&k=20&m=1295596568&s=170667a&w=0&h=iYtQ3yZhbJ7Qo_qFpZDN3KIJ5zkhiJGqo2OjL6aHyzE=');
+    background: url('https://images.unsplash.com/photo-1594007654729-407eedc4be65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
       h3{
-          font-size: 1.0rem;
+          font-size: 1.3rem;
           text-align: center;
          
       }
@@ -116,7 +116,7 @@ span {
 }
 
 .container {
-    height: 350px;
+    height: 430px;
     width: 350px; 
     align-self: center;
     justify-content: center;
@@ -150,4 +150,12 @@ input {
 
 .success_msg {
 	background-color: #5cdd5c;
+}
+
+.link-forget {
+    color: darkred;
+}
+
+.asking {
+   margin-bottom: 2rem;
 }

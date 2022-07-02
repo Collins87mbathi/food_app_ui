@@ -7,8 +7,8 @@
 
   h6 {
     font-size: 1rem;
-
   }
+
   .hero-img {
     display: none;
   }
@@ -21,10 +21,12 @@
     display: grid;
     place-items: center;
   }
+
   .hero-info h4 {
     color: grey;
+    margin: 0.3rem;
   }
-
+ 
   .btn {
     text-transform: uppercase;
     background:$body-color ;
@@ -45,6 +47,7 @@
   .hero-btn {
     margin-top: 1.25rem;
   }
+
   @media screen and (min-width: 992px) {
     .hero-img  {
       display: block;
@@ -55,7 +58,6 @@
       grid-template-columns: 1fr 1fr;
     }
  
-   
   }
   .hero-photo {
     filter:drop-shadow(10px 10px 20px black);

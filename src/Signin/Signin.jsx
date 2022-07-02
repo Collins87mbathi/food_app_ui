@@ -52,13 +52,15 @@ const submitForm = async (e) => {
     </div>
     <form onSubmit={(e)=>submitForm(e)}>  
 <div className="inputs">
-
   <div className="input-type">
     <input type='email' name='email' placeholder='Email Address'required value={userdata.email} onChange={(e)=>handleChange(e)}/>
   </div>
   <div className="input-type">
     <input type='password' name='password' placeholder='password'required value={userdata.password} onChange={(e)=>handleChange(e)}/>
   </div>
+  <Link to='/forgot-password'>
+  <span className='link-forget'>forgot password ?</span>
+  </Link>
 </div>
 {errors && <div className="error_msg">{errors}</div>}
 {msg && <div className="success_msg">{msg}</div>}
@@ -68,7 +70,7 @@ const submitForm = async (e) => {
  </form>
 
   </div>
-  <span>Don't  have an account ? <Link to='/register'>sign up</Link></span>
+  <span className='asking'>Don't  have an account ? <Link to='/register'>sign up</Link></span>
     </div>
   )
 }
