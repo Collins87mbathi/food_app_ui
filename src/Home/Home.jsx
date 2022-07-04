@@ -1,7 +1,9 @@
 import React from 'react'
-import Filter from '../Filter/Filter'
+import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import Navbar from '../Navbar/Navbar'
+import Products from '../Products/Products'
+
 
 
 const Home = () => {
@@ -9,7 +11,8 @@ const Home = () => {
     <>
     <Navbar/>
    <Header/>
-   <Filter/>
+   <Products/>
+   <Footer/>
     </>
     
   )

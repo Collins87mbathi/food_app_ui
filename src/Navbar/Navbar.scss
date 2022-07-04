@@ -11,29 +11,30 @@
     
     text-align: center;
     cursor: pointer;
-    color: grey;
+    color: white;
     margin: 0 1rem;
     &:hover {
-     color: white;
+     color: black;
      margin-top: 0.5rem;
     }
 }
 
 header {
-    position: fixed;
+    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height:  80px;
     padding: 0 2rem;
     background-color: $body-color;
-  
+    position: fixed;
+    z-index:99;
     span {
-        color: gray;
+        color: white;
 
         &:hover {
-            color: white;
+            color: black;
         }
     }
 
@@ -57,13 +58,13 @@ header {
 nav {
     a{
         margin: 0 2rem;
-        color: grey;
+        color: white;
         text-decoration: none;
     }
 }
 
 nav a:hover {
-    color: white;
+    color: black;
 }
 
 @media only screen and (max-width: 1024px) {

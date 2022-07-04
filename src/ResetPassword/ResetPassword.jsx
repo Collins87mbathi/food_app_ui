@@ -31,14 +31,10 @@ const ResetPassword = () => {
 			setError("");
 			window.location('/login');
 		} catch (error) {
-			if (
-				error.response &&
-				error.response.status >= 400 &&
-				error.response.status <= 500
-			) {
-				setError(error.response.data.message);
+			
+				setError(error.response.data.msg);
 				setMsg("");
-			}
+			
 		}
 	};
 

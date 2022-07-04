@@ -21,6 +21,7 @@ const dispatch = useDispatch();
 
   return (
    <header>
+    
         <img src={logo} className='logo' alt='logo' />
 
         <nav  ref={navRef}>
@@ -44,6 +45,7 @@ const dispatch = useDispatch();
         <button className='nav-btn' onClick={showNavbar}>
             <FaBars/>
         </button>
+        
    </header>
   )
 }

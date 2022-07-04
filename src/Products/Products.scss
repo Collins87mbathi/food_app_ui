@@ -1,0 +1,82 @@
+@import '../variables/variables';
+
+ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+
+.title {
+    h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      
+ h1,
+ h2,
+ h3,
+ h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+   line-height: 1.25;
+   margin-bottom: 0.75rem;
+ }
+}
+
+ 
+  @media screen and (min-width: 800px) {
+
+
+    .title {
+         h1 {
+       font-size: 4rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+   
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1;
+    }
+
+    }
+    
+  
+   
+  }
+
+  .section {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+
+  @media screen and (min-width: 992px) {
+    .section {
+      width: 95vw;
+    }
+  }
+
+  .menu {
+    padding: 3rem 0;
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .underline {
+    width: 5rem;
+    height: 0.25rem;
+    background: $body-color;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
