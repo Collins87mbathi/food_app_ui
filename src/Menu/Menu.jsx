@@ -7,9 +7,9 @@ const Menu = ({menuitems}) => {
     <div className="section-center">
       {menuitems.map((menuitem)=> {
         return (
-        <article key={menuitem.id} className="menu-item">
+        <article key={menuitem._id} className="menu-item">
            <div className="menu-hover">
-           <img src={menuitem.img} alt={menuitem.title} className='photo' />
+           <img src={menuitem.image.url} alt={menuitem.title} className='photo' />
           <button className="cart-link">
           <FaCartPlus/>
           </button>
