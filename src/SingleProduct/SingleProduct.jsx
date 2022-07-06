@@ -2,69 +2,65 @@ import React from 'react'
 import './SingleProduct.scss';
 import axios from 'axios';
 import {BASE_URL} from '../Utils/constants';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import {useParams} from 'react-router-dom'
 import {FaCartPlus} from 'react-icons/fa';
-
-const useStyles = makeStyles({
-    root: {
-      maxWidth: 345,
-    },
-    media: {
-      height: 140,
-    },
-  });
-  
+import {AiFillPlusSquare} from 'react-icons/ai';
+import {AiFillMinusSquare} from 'react-icons/ai';
+import {useDispatch} from 'react-redux';
+import {addProduct} from '../Redux/Slices/cartSlice';
  
 const SingleProduct = () => {
+    const dispatch = useDispatch();
     const param = useParams();
     const [product, setProduct] = useState([]);
-    
+    const [quantity, setQuantity] = useState(1);
     useEffect(()=> {
     const getProducts = async () => {
      const res = await axios.get(BASE_URL + `/products/${param.id}`);
      setProduct(res.data);
-     
     }
     getProducts();
 
     },[param.id]);
 
-    const classes = useStyles();
-    console.log(product);
+ 
+    const handleClick = () => {
+        dispatch (
+        addProduct({...product, quantity})
+        )
+    }
+
+    const handleQuantity = (type) => {
+        if (type === "dec") {
+          quantity > 1 && setQuantity(quantity - 1);
+        } else {
+          setQuantity(quantity + 1);
+        }
+      };
     
             return (
-                <Card className={classes.root}>
-                <CardActionArea>
-                  <CardMedia
-                    className={classes.media}
-                    image={product.image.url}
-                    title={product.title}
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                     {product.title}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                     {product.description}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    <FaCartPlus/>
-                  </Button>
-                </CardActions>
-              </Card>
+              <div className='Single-product'>
+                <div className="Single-img">
+                    <img src={product.image?.url} className='Single-photo' alt={product.title}/>
+                </div>
+                <div className="Single-dec">
+                    <h6 className='Single-title'>{product.title}</h6>
+                    <p>{product.description}</p>
+                    <div className="Single-icons">
+                        <button className='cart-button' onClick={handleClick}>
+                         <FaCartPlus/>
+                        </button>
+                        <div className="Single-quantity">
+                          <AiFillMinusSquare  onClick={() => handleQuantity("dec")}/>
+                               <p>{quantity}</p>
+                          <AiFillPlusSquare  onClick={() => handleQuantity("inc")}/>
+                        </div>
+                    </div>
+                </div>
+
+              </div>
             );
         
     

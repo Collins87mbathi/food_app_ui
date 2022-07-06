@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaCartPlus} from 'react-icons/fa';
+import {FaSearchPlus} from 'react-icons/fa';
 import {Link} from 'react-router-dom'
 import './Menu.scss';
 
@@ -14,7 +14,7 @@ const Menu = ({menuitems}) => {
            <img src={menuitem.image.url} alt={menuitem.title} className='photo' />
          <Link to = {`/products/${menuitem._id}`}>
           <button  className="cart-link">
-          <FaCartPlus/>
+          <FaSearchPlus/>
           </button>
           </Link>
            </div>

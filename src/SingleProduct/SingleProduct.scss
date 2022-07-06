@@ -1,0 +1,111 @@
+@import '../variables/variables';
+
+.Single-img {
+    img {
+    width: 350px;
+    height: 350px;
+    border-radius: 2rem;
+    
+    }
+
+}
+
+.Single-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   margin: 4rem;
+   justify-content: center;
+    align-items: center;
+}
+
+.Single-dec {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    
+    h6 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+// .Single-title {
+//     // margin: 2rem;
+// }
+
+.Single-icons {
+    display: flex;
+    margin: 2rem;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+.Single-icons {
+    button {
+    font-size: 2.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    &:hover {
+     color: $body-color;
+    }
+    }
+}
+
+.Single-quantity {
+    font-size: 2.5rem;
+    display: flex;
+    gap:0.8rem;
+    cursor: pointer;
+
+
+    p {
+        color: $body-color;
+        
+    }
+}
+
+@media screen and (max-width:768px) {
+    .Single-product {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem 2rem;
+        justify-items: center;
+        
+    }
+
+    .Single-icons {
+        button {
+            font-size: 1.6rem;
+        }
+    }
+
+    .Single-img {
+        border-radius:0.25rem;
+       img {
+        object-fit: cover;
+        width: 250px;
+        height: 250px;
+
+       }
+    }
+
+    .Single-quantity {
+        font-size: 1.6rem;
+        display: flex;
+    }
+
+ .Single-dec {
+  h6 {
+    font-size: 1.4rem;
+
+  }
+  p {
+    font-size: 1rem;
+  }
+ }
+}

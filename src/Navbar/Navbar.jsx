@@ -9,17 +9,17 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import {useSelector,useDispatch} from 'react-redux';
 import  {logout} from '../Redux/Slices/userSlice';
 // import {FiLogOut} from 'react-icons/fi';
+import {Link} from 'react-router-dom'
 
 const Header = () => {
  const navRef = useRef(null);
 const user = useSelector((state)=> state.user.user);
-const cart = useSelector((state)=>state.cart.products);
+const quantity = useSelector((state)=>state.cart.quantity);
 const dispatch = useDispatch();
  const showNavbar = () => {
     navRef.current.classList.toggle("responsive-nav")
  };
 
-console.log(cart.length);
   return (
    <header>
     
@@ -31,13 +31,13 @@ console.log(cart.length);
             <span className='logout' onClick={(e) => {
                 dispatch(logout());
               }}>Logout</span>
-            <a href='/cart'>
+            <Link to ='/cart'>
                   <IconButton aria-label="cart">
-                  <Badge overlap="rectangular" badgeContent={cart.length} color="secondary">
+                  <Badge overlap="rectangular" badgeContent={quantity} color="secondary">
                   <ShoppingCartIcon />
                   </Badge>
                   </IconButton>
-                </a>
+                </Link>
                 <span> {user.name}</span>
             <button className='nav-btn nav-close-btn' onClick={showNavbar}>
               <FaTimes/>
