@@ -1,8 +1,10 @@
 import React from 'react';
 import {FaCartPlus} from 'react-icons/fa';
+import {Link} from 'react-router-dom'
 import './Menu.scss';
 
 const Menu = ({menuitems}) => {
+
   return (
     <div className="section-center">
       {menuitems.map((menuitem)=> {
@@ -10,10 +12,11 @@ const Menu = ({menuitems}) => {
         <article key={menuitem._id} className="menu-item">
            <div className="menu-hover">
            <img src={menuitem.image.url} alt={menuitem.title} className='photo' />
-          <button className="cart-link">
+         <Link to = {`/products/${menuitem._id}`}>
+          <button  className="cart-link">
           <FaCartPlus/>
           </button>
-          
+          </Link>
            </div>
         <div className='item-info'>
             <h4>{menuitem.title}</h4>

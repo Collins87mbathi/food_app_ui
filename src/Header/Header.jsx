@@ -4,8 +4,9 @@ import {useSelector} from 'react-redux'
 
 const Header = () => {
  const user = useSelector((state)=>state.user.user);
-
-  return (
+ 
+ 
+ return (
     <div className="hero">
       <div className="section-center hero-center">
         <article className="hero-info">

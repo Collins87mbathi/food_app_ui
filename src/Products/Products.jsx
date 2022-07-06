@@ -13,7 +13,7 @@ import {BASE_URL} from '../Utils/constants'
 const Products = () => {
 
     const [mainData, setMainData] = useState([]);
-const [menuitems, setMenuitems] = useState(mainData);
+    const [menuitems, setMenuitems] = useState([]);
 
 useEffect(() => {
   
@@ -21,24 +21,28 @@ useEffect(() => {
    const res = await axios.get(BASE_URL + '/products/all');
  
    setMainData(res.data.items);
+   setMenuitems(res.data.items);
   }
   getProducts();
 },[]);
+
+
   
 const allCategories = ['all', ...new Set(mainData.map((main)=> main.category))]
 
-console.log(allCategories);
+// console.log(allCategories);
 const filterItems = (category) => {
     if (category === 'all') {
-        setMenuitems(mainData);
-       
-        return;
+      // setMainData(mainData);
+       setMenuitems(mainData);
+       return;
     }
     const newItems = mainData.filter((main) => main.category === category);
     setMenuitems(newItems);
     
+    
 }
-
+console.log(menuitems);
   return (
     <main>
         <section className='menu section'>

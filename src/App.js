@@ -7,7 +7,8 @@ import Emailvertify from './Emailvertify/Emailvertify';
 import ProtectedRoute from './Utils/ProtectedRoute';
 import ForgetPassword from './ForgetPassword/ForgetPassword';
 import ResetPassword from './ResetPassword/ResetPassword';
-
+import Cart from './Cart/Cart';
+import SingleProduct from './SingleProduct/SingleProduct';
 
 const App = () => {
   return (
@@ -25,6 +26,8 @@ const App = () => {
         <Route path="/users/:id/verify/:token" element={<Emailvertify/>}/>
         <Route path='/forgot-password' element={<ForgetPassword/>}/>
         <Route path='/password-reset/:id/verify/:token' element={<ResetPassword/>}/>
+        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/products/:id' element={<SingleProduct/>}/>
       </Routes>
     </Router> 
     </>

@@ -13,12 +13,13 @@ import  {logout} from '../Redux/Slices/userSlice';
 const Header = () => {
  const navRef = useRef(null);
 const user = useSelector((state)=> state.user.user);
+const cart = useSelector((state)=>state.cart.products);
 const dispatch = useDispatch();
  const showNavbar = () => {
     navRef.current.classList.toggle("responsive-nav")
  };
 
-
+console.log(cart.length);
   return (
    <header>
     
@@ -32,7 +33,7 @@ const dispatch = useDispatch();
               }}>Logout</span>
             <a href='/cart'>
                   <IconButton aria-label="cart">
-                  <Badge overlap="rectangular" badgeContent={4} color="secondary">
+                  <Badge overlap="rectangular" badgeContent={cart.length} color="secondary">
                   <ShoppingCartIcon />
                   </Badge>
                   </IconButton>
