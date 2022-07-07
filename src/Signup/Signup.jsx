@@ -63,7 +63,7 @@ const SubmitForm = async(e) => {
                 onChange={(e) => handleChange(e)}/>
   </div>
   <div className="input-type">
-    <input type='password' name='password' placeholder='password' required value={userdata.password} onChange={(e)=>handleChange(e)}/>
+    <input type='password' name='password' placeholder='password' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required value={userdata.password} onChange={(e)=>handleChange(e)}/>
   </div>
 </div>
 {errors && <div className="error_msg">{errors}</div>}
