@@ -1,22 +1,42 @@
 @import '../variables/variables';
 
-.Single-img {
-    img {
-    width: 350px;
-    height: 350px;
-    border-radius: 2rem;
-    
-    }
-
-}
 
 .Single-product {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-   margin: 4rem;
-   justify-content: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 4rem;
+    gap: 2rem;
+   align-self: center;
+   align-content: center;
     align-items: center;
 }
+
+.Single-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Single-button {
+    padding: 0.5rem 0.275rem;
+    outline: none;
+    background-color: $body-color;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    margin: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+//    flex-direction: 
+    &:hover {
+        background-color:transparent;
+        color: $body-color;
+        border: 1px solid $body-color;
+    }
+}
+
 
 .Single-dec {
     display: flex;
@@ -33,22 +53,32 @@
         text-align: center;
     }
 }
+.Single-photo {
+    border-radius:0.35rem;
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
 
+}
 // .Single-title {
 //     // margin: 2rem;
 // }
 
 .Single-icons {
     display: flex;
-    margin: 2rem;
-    justify-content: space-around;
+    // margin: 2rem;
+    justify-content: space-between;
+    align-items: center;
     font-size: 1.5rem;
+    gap: 3rem;
 }
 .Single-icons {
     button {
     font-size: 2.5rem;
     border: none;
     background: none;
+    display: flex;
+    align-items: center;
     cursor: pointer;
     &:hover {
      color: $body-color;
@@ -59,6 +89,7 @@
 .Single-quantity {
     font-size: 2.5rem;
     display: flex;
+    align-items: center;
     gap:0.8rem;
     cursor: pointer;
 
@@ -71,11 +102,12 @@
 
 @media screen and (max-width:768px) {
     .Single-product {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem 2rem;
-        justify-items: center;
-        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+        border-radius: 1rem;
     }
 
     .Single-icons {
@@ -85,14 +117,12 @@
         }
     }
 
-    .Single-img {
-        border-radius:0.25rem;
-       img {
+    .Single-photo {
+        border-radius:0.35rem;
         object-fit: cover;
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
 
-       }
     }
 
     .Single-quantity {

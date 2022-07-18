@@ -15,12 +15,10 @@ const Footer = () => {
             <h4>Newsletter</h4>
             <p>Sign up for our newsletter & promotions </p>
            
-            <div className="email-newsletter">
-
-<input type='email' name='email' placeholder='email here'/>
-<button type='submit' className='submit-newsletter'>Subscribe</button>
-
-</div>
+            <div className="mailInputContainer">
+      <input type="text" placeholder="Your Email" />
+      <button>Subscribe</button>
+    </div>
         </div>
 
            <div className="footer-reserve">

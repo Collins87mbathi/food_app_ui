@@ -10,6 +10,7 @@ import {AiFillPlusSquare} from 'react-icons/ai';
 import {AiFillMinusSquare} from 'react-icons/ai';
 import {useDispatch} from 'react-redux';
 import {addProduct} from '../Redux/Slices/cartSlice';
+import {Link} from 'react-router-dom'
  
 const SingleProduct = () => {
     const dispatch = useDispatch();
@@ -42,10 +43,8 @@ const SingleProduct = () => {
     
             return (
               <div className='Single-product'>
-                <div className="Single-img">
                     <img src={product.image?.url} className='Single-photo' alt={product.title}/>
-                </div>
-                <div className="Single-dec">
+                    <div className='Single-text'>
                     <h6 className='Single-title'>{product.title}</h6>
                     <p>{product.description}</p>
                     <div className="Single-icons">
@@ -58,9 +57,11 @@ const SingleProduct = () => {
                           <AiFillPlusSquare  onClick={() => handleQuantity("inc")}/>
                         </div>
                     </div>
+                    <Link to='/'>
+                    <button className="Single-button">back home</button>
+                    </Link>
+                    </div>
                 </div>
-
-              </div>
             );
         
     
